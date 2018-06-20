@@ -1,0 +1,23 @@
+<p>
+  tabs works!
+</p>
+
+<div class="container-fluid">
+  
+ 
+    
+  <!-- (selectedTabChange)='onSelectChange($event)'     INSERT INTO mat-tab-group -->  
+  <nav mat-tab-nav-bar>
+
+    <a mat-tab-link [routerLink] = "about-me" routerLinkActive #rla="routerLinkActive"
+    [active]="rla.isActive"> ABOUT ME
+
+    </a>
+    <a mat-tab-link [routerLink] = "fine-art"      routerLinkActive #rla="routerLinkActive"
+    [active]="rla.isActive">FINE ART</a>
+    
+
+  </nav >
+
+    <router-outlet></router-outlet>
+    </div>

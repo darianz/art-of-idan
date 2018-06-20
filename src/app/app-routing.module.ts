@@ -6,16 +6,18 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 
- 
-const routes: Routes = [
-  //{ path: '', redirectTo: '/', pathMatch: 'full' },
-  //{ path: 'dashboard', component: DashboardComponent },
-    //{ path: 'fine-art', component: FineArtComponent , pathMatch: 'full' },
-    //{ path: 'about-me', component: AboutMeComponent , pathMatch: 'full'}
+
+ const routes: Routes = [
+  // { path: '', redirectTo: '/', pathMatch: 'full' },
+  // { path: 'dashboard', component: DashboardComponent },
+
+  { path: 'about-me', component: AboutMeComponent },
+  { path: 'fine-art', component: FineArtComponent }
 ];
- 
+
 @NgModule({
   imports: [ RouterModule.forRoot(routes) ],
   exports: [ RouterModule ]
 })
 export class AppRoutingModule {}
+

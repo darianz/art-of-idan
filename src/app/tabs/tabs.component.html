@@ -4,20 +4,53 @@
 
 <div class="container-fluid">
   
- 
-    
-  <!-- (selectedTabChange)='onSelectChange($event)'     INSERT INTO mat-tab-group -->  
-  <nav mat-tab-nav-bar>
 
-    <a mat-tab-link [routerLink] = "about-me" routerLinkActive #rla="routerLinkActive"
-    [active]="rla.isActive"> ABOUT ME
+  <nav mat-tab-nav-bar [backgroundColor]="background">
 
+    <a mat-tab-link routerLink = "/about-me"  (click)="activeLink = 'about-me'" [active]="activeLink == 'about-me'"> 
+      ABOUT ME 
     </a>
-    <a mat-tab-link [routerLink] = "fine-art"      routerLinkActive #rla="routerLinkActive"
-    [active]="rla.isActive">FINE ART</a>
+    <a mat-tab-link routerLink = "/fine-art" (click)="activeLink = 'fine-art'" [active]="activeLink == 'fine-art'">
+      FINE ART
+    </a>
+    
+
+  </nav >
+
+ 
+</div>
+
+<router-outlet></router-outlet>
+<h1>end of tabs</h1>
+  <!-- (selectedTabChange)='onSelectChange($event)'     INSERT INTO mat-tab-nav-bar -->  
+
+  
+
+
+
+<!-- 
+NAV WITHOUT DESIGN
+       <nav mat-tab-nav-bar>
+
+    <a mat-tab-link routerLink = "/about-me"> ABOUT ME</a>
+    <a mat-tab-link routerLink = "/fine-art">FINE ART</a>
     
 
   </nav >
 
     <router-outlet></router-outlet>
     </div>
+-->
+
+
+<!-- DeSIGN WITHOUT NAV
+    <nav mat-tab-nav-bar [backgroundColor]="background">
+      <a mat-tab-link *ngFor="let link of links"
+         (click)="activeLink = link"
+         [active]="activeLink == link"> {{ link }} </a>
+      
+    </nav>
+
+  -->
+
+ 

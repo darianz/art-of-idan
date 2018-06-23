@@ -4,3 +4,11 @@ html{
     text-align: center!important;
 }
 
+/* Fixing size of FIRST img on cover-image */
+
+.container-fluid{
+    padding-right: 0px !important; 
+    padding-left: 0px !important; 
+    margin-right: 0px !important; 
+    margin-left: 0px !important; 
+}

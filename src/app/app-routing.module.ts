@@ -12,7 +12,9 @@ import { RouterModule, Routes } from '@angular/router';
   // { path: 'dashboard', component: DashboardComponent },
   { path: '', component: AboutMeComponent },
   { path: 'about-me', component: AboutMeComponent },
-  { path: 'fine-art', component: FineArtComponent }
+  { path: 'fine-art', component: FineArtComponent },
+  { path: 'sketches', component: FineArtComponent },
+
 ];
 
 @NgModule({

@@ -1,6 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
-import { trigger, state, style } from '@angular/animations';
+import { CoverImageState } from '../animations';
+
 
 
 @Component({
@@ -8,16 +9,7 @@ import { trigger, state, style } from '@angular/animations';
   templateUrl: './cover-image.component.html',
   styleUrls: ['./cover-image.component.css'],
   animations: [
-    trigger('CoverImageState', [
-      state('show', style({
-        opacity: 1
-      })),
-
-      state('hide', style({
-        opacity: 0
-      })),
-
-    ])
+    CoverImageState
   ]
 })
 
